@@ -13,16 +13,18 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "openai": "^4.10.0",
-    "@libsql/client": "^0.5.0",
-    "@libsql/vector": "^0.5.0",
+    "@libsql/client": "^0.15.6",
+    "@libsql/vector": "^0.15.6",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
     "typescript": "5.1.6",
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.2",
-    "tailwindcss": "3.4.24",
+    "tailwindcss": "^3.3.0",
     "postcss": "8.4.24",
-    "autoprefixer": "10.4.14"
+    "autoprefixer": "10.4.14",
+    "@types/react": "19.1.4",
+    "@types/uuid": "^10.0.0"
   }
 }
