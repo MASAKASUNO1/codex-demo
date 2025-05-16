@@ -27,3 +27,8 @@ yarn-error.log*
 .specstory/.project.json
 # SpecStory explanation file
 .specstory/.what-is-this.md
+# Ignore SpecStory history logs
+.specstory/history/
+
+# Ignore cursor index/rules
+.cursor/
