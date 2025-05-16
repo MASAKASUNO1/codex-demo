@@ -1,5 +1,7 @@
 # API リファレンス
 
+- **OpenAI API デフォルトモデル**: gpt-4.1
+
 ## メモ追加 API
 
 - **URL**: `/api/memo/add`

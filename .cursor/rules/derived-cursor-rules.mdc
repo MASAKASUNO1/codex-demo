@@ -1,0 +1,46 @@
+---
+description: AI rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+
+All project documentation should be written in Markdown format.  New documentation files related to LibSQL vector database usage should be added to the `docs` directory.  Example: `docs/vector-db.md` was created to document the LibSQL vector database setup, usage, and best practices.  This includes instructions for database setup, embedding creation and storage, and similarity search.
+
+Version updates to packages like `@libsql/client` and `tailwindcss` should be recorded here, along with the reason for the update.  For example:  `@libsql/client` updated from `^0.5.0` to `^0.15.6` to resolve the incompatibility with `@libsql/vector` (which is now deprecated and integrated into `@libsql/client`). `tailwindcss` updated from `3.4.24` to `^3.3.0` due to version incompatibility.
+
+## TECH STACK
+
+- Node.js (version:  [Specify Node.js version])
+- Next.js (version: [Specify Next.js version])
+- TypeScript (version: [Specify TypeScript version])
+- @libsql/client (version: ^0.15.6)
+- tailwindcss (version: ^3.3.0)
+- OpenAI API (version: ^4.10.0)
+- uuid (version: ^9.0.0)
+- @types/uuid (added to resolve TypeScript errors)
+
+
+## CODING STANDARDS
+
+- Code should be written in TypeScript.
+- Follow standard JavaScript/TypeScript coding conventions.
+- Use consistent indentation (e.g., 2 spaces).
+- Write clear and concise comments.
+
+## WORKFLOW & RELEASE RULES
+
+- All code changes should be committed to Git with clear and descriptive commit messages.
+- Use a consistent branching strategy (e.g., Gitflow).
+- Before merging any changes into the main branch, ensure all tests pass.
+-  Regularly run `npm audit` to check for vulnerabilities and address them promptly using `npm audit fix --force`.
+
+
+## DEBUGGING
+
+When encountering errors like "Module not found," thoroughly search for the affected modules using tools like `grep`.  For example, searching for `import.*@libsql/vector` helped identify the source of the module not found error.  Correct imports and usage of updated packages (`@libsql/client` instead of the deprecated `@libsql/vector`).
+
+
+## LibSQL Vector Database Usage
+
+Use `@libsql/client` for all LibSQL interactions, including vector database operations. The `@libsql/vector` package is deprecated.  Refer to `docs/vector-db.md` for detailed instructions on setting up and using the LibSQL vector database.  Remember to use appropriate functions like `libsql_vector_cosine` or `libsql_vector_euclidean` for similarity search within your SQL queries.  The dimension of the embedding vector should be adjusted based on the OpenAI model used (e.g., 1536 for `text-embedding-3-small`). Metadata should be stored as JSON strings.

@@ -14,7 +14,6 @@
     "react-dom": "18.2.0",
     "openai": "^4.10.0",
     "@libsql/client": "^0.15.6",
-    "@libsql/vector": "^0.15.6",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
